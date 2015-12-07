@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from collections import defaultdict
 import re
 
 def level_change(lights, x1, y1, x2, y2, change):

@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from collections import defaultdict
 import re
 
 def on_off(lights, x1, y1, x2, y2, val):
