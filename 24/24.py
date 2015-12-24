@@ -2,6 +2,7 @@
 
 import re
 from itertools import combinations
+from operator import mul
 
 def do(input_file, group_count):
     with open(input_file) as f:
@@ -13,7 +14,7 @@ def do(input_file, group_count):
             break
     # assumption: the smallest group possible with the smallest QE will still allow the rest of the
     # packages to be divided into two groups with the same total weight for the input
-    print sorted([reduce(lambda x, y: x*y, g, 1) for g in possible_groups])[0]
+    print min([reduce(mul, group) for group in possible_groups])
     
 #do('input-test', 3)
 #do('input-test', 4)
